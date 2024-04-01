@@ -34,7 +34,6 @@ def reqister():
             email=form.email.data,
             surname=form.surname.data,
             clas=form.clas.data,
-            password=form.password_again.data
         )
         user.set_password(form.password.data)
         db_sess.add(user)
@@ -44,4 +43,5 @@ def reqister():
 
 
 if __name__ == '__main__':
+    db_session.global_init("db/blogs.db")
     app.run(port=8080, host='127.0.0.1')
