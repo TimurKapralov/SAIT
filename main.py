@@ -33,7 +33,7 @@ def reqister():
             name=form.name.data,
             email=form.email.data,
             surname=form.surname.data,
-            clas=form.clas.data,
+            clas=form.clas.data
         )
         user.set_password(form.password.data)
         db_sess.add(user)
